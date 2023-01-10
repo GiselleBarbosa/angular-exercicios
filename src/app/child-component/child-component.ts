@@ -2,12 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-child-component',
-  templateUrl: './child-component.component.html',
-  styleUrls: ['./child-component.component.scss']
+  templateUrl: './child-component.html',
+  styleUrls: ['./child-component.scss']
 })
 export class ChildComponentComponent implements OnInit {
-  
-  titulo: string = 'Componente Filho';
+  titulo: string = 'child-component';
+
   @Input() textReceived: string = '';
 
   constructor() { }

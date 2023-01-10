@@ -1,6 +1,6 @@
-/* import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChildComponentComponent } from './child-component/child-component.component';
+import { ChildComponentComponent } from './child-component/child-component';
 import { AppComponent } from './app.component';
 
 
@@ -15,4 +15,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
- */
