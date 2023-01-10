@@ -1,5 +1,12 @@
 <app-header></app-header>
 
-<div class="container mt-5">
-  <router-outlet></router-outlet>
+<!-- Utilizando Input -->
+<div class="container mt-4">
+<h6>{{ titulo | uppercase }} </h6>
+   <app-child-component [textReceived]="textSent">
+  </app-child-component>
+</div>
+
+<div class="container">
+  
 </div>

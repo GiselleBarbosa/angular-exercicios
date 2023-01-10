@@ -1,24 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './componentes/header/header.component';
-import { Page1Component } from './componentes/pages/page1/page1.component';
-import { Page2Component } from './componentes/pages/page2/page2.component';
-import { Page3Component } from './componentes/pages/page3/page3.component';
+import { HeaderComponent } from './header/header.component';
+import { ChildComponentComponent } from './child-component/child-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    Page1Component,
-    Page2Component,
-    Page3Component
+    ChildComponentComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    // AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

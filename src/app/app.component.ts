@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pratica-angular';
+  
+  titulo:string = 'Componente Pai'
+
+  textSent = 'Meu texto enviado'
 }
