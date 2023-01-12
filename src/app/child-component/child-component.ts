@@ -6,8 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./child-component.scss']
 })
 export class ChildComponentComponent implements OnInit {
-  titulo: string = 'child-component';
-
   @Input() textReceived: string = '';
 
   constructor() { }

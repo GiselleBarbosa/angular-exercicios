@@ -1,13 +1,13 @@
 <app-header></app-header>
-<div class="container mt-4">
 
-<h6>{{ titulo | uppercase }} </h6>
-<!-- Task 1 - Criar um botão e exibir o texto dele vindo de um input
-   
-   <app-child-component [textReceived]="textSent">
-  </app-child-component>  -->
+<div class="container mt-4 ms-2">
 
-  <app-child-component [textReceived]="textSent">
-  </app-child-component>
+  <h6>{{ titulo | uppercase }}</h6>
 
+  <app-child-component [textReceived]="textSent"></app-child-component>
+  <hr>
+
+  <!-- Task 2 - Criar um botão e exibir um texto e icone vindo de um input -->
+  <app-button [btnText]="btnText" [btnIcon]="btnIcon">
+  </app-button>
 </div>
