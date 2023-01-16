@@ -23,6 +23,10 @@ export class AppComponent {
   onGameReceived(newGame: string) {
     this.games.push(newGame);
   }
+
+  onRemoveGame(newGame: string) {
+    this.games.shift();
+  }
 }
 
 

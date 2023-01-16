@@ -10,8 +10,8 @@ export class OutputComponent implements OnInit {
   title: string = 'Praticando Output';
 
   @Output() clickAlertEvent = new EventEmitter<any>();
-
-  @Output() newListGamesEvent = new EventEmitter<string>();
+  @Output() createEvent = new EventEmitter<string>();
+  @Output() removeGameEvent = new EventEmitter<string>();
 
   constructor() { }
 
@@ -22,8 +22,12 @@ export class OutputComponent implements OnInit {
     this.clickAlertEvent.emit($event);
   }
 
-  newListGames(newGame : string) {
-    this.newListGamesEvent.emit(newGame);
+  createGame(newGame: string) {
+    this.createEvent.emit(newGame);
+  }
+
+  removeGame(newGame: string) {
+    this.removeGameEvent.emit(newGame);
   }
 
 }

@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<div class="container mt-4 ms-2 mb-5">
+<div class="container mt-4">
 
   <h6>{{ titulo | uppercase }}</h6>
   <!-- Task 1  -->
@@ -12,10 +12,15 @@
 
   <hr>
   <!-- Task 3, 4  -->
-  <app-output class="col-6" (clickAlertEvent)="onAlertReceived()"
-    (newListGamesEvent)="onGameReceived($event)"></app-output>
+  <app-output class="col-6" 
+  (clickAlertEvent)="onAlertReceived()"
+  (createEvent)="onGameReceived($event)"
+  (removeGameEvent)="onRemoveGame($event)"
+    
+    ></app-output>
+
   <ul>
     <li *ngFor="let game of games">{{ game }}</li>
   </ul>
-  <hr><br>
+
 </div>
