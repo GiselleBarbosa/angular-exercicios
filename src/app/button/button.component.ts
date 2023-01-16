@@ -6,13 +6,22 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
+  title: string = 'UTILIZANDO INPUT + CONDICIONAL'
+  @Input() btnText: string = '';
+  @Input() btnIcon?: string = '';
 
-  @Input() btnText = '';
-  @Input() btnIcon = '';
+  checkIcon: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+    if (!!this.btnIcon) {
+      this.checkIcon = true;
+    }
   }
 
+
 }
+
+
+

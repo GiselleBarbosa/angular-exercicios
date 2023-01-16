@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ChildComponentComponent } from './child-component/child-component';
 import { ButtonComponent } from './button/button.component';
+import { OutputComponent } from './output/output.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ButtonComponent } from './button/button.component';
     HeaderComponent,
     ChildComponentComponent,
     ButtonComponent,
+    OutputComponent,
   ],
   imports: [
     BrowserModule,

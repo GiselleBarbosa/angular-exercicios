@@ -9,7 +9,14 @@ export class AppComponent {
   titulo: string = 'utilizando input';
   // Task 1
   textSent = 'Meu texto enviado';
+
   // Task 2
   btnText = 'Adicionar';
   btnIcon = 'bi bi-plus';
+
+  onAlertReceived() {
+    alert("clicou no botão");
+  }
 }
+
+

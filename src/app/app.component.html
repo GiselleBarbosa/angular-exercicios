@@ -8,6 +8,11 @@
   <hr>
 
   <!-- Task 2 - Criar um botão e exibir um texto e icone vindo de um input -->
-  <app-button [btnText]="btnText" [btnIcon]="btnIcon">
-  </app-button>
+  <app-button [btnText]="btnText" [btnIcon]="btnIcon"></app-button>
+
+<hr>
+<!-- Task 3 - Utlizando output para enviar um evento -->
+<app-output (clickAlertEvent)="onAlertReceived()"></app-output>
+
+
 </div>
