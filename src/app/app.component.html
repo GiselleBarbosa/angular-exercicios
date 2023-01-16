@@ -1,18 +1,21 @@
 <app-header></app-header>
 
-<div class="container mt-4 ms-2">
+<div class="container mt-4 ms-2 mb-5">
 
   <h6>{{ titulo | uppercase }}</h6>
-
+  <!-- Task 1  -->
   <app-child-component [textReceived]="textSent"></app-child-component>
   <hr>
 
-  <!-- Task 2 - Criar um botão e exibir um texto e icone vindo de um input -->
+  <!-- Task 2  -->
   <app-button [btnText]="btnText" [btnIcon]="btnIcon"></app-button>
 
-<hr>
-<!-- Task 3 - Utlizando output para enviar um evento -->
-<app-output (clickAlertEvent)="onAlertReceived()"></app-output>
-
-
+  <hr>
+  <!-- Task 3, 4  -->
+  <app-output class="col-6" (clickAlertEvent)="onAlertReceived()"
+    (newListGamesEvent)="onGameReceived($event)"></app-output>
+  <ul>
+    <li *ngFor="let game of games">{{ game }}</li>
+  </ul>
+  <hr><br>
 </div>

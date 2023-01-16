@@ -8,8 +8,10 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class OutputComponent implements OnInit {
 
   title: string = 'Praticando Output';
-  
+
   @Output() clickAlertEvent = new EventEmitter<any>();
+
+  @Output() newListGamesEvent = new EventEmitter<string>();
 
   constructor() { }
 
@@ -18,6 +20,10 @@ export class OutputComponent implements OnInit {
 
   clickAlert($event: any) {
     this.clickAlertEvent.emit($event);
+  }
+
+  newListGames(newGame : string) {
+    this.newListGamesEvent.emit(newGame);
   }
 
 }

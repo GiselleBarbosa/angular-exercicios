@@ -14,8 +14,14 @@ export class AppComponent {
   btnText = 'Adicionar';
   btnIcon = 'bi bi-plus';
 
+  games: string[] = [];
+
   onAlertReceived() {
     alert("clicou no botão");
+  }
+
+  onGameReceived(newGame: string) {
+    this.games.push(newGame);
   }
 }
 
