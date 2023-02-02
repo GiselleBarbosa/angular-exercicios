@@ -12,15 +12,14 @@
 
   <hr>
   <!-- Task 3, 4  -->
-  <app-output class="col-6" 
-  (clickAlertEvent)="onAlertReceived()"
-  (createEvent)="onGameReceived($event)"
-  (removeGameEvent)="onRemoveGame($event)"
-    
-    ></app-output>
+  <app-output class="col-6" (clickAlertEvent)="onAlertReceived()" (createEvent)="onGameReceived($event)"
+    (removeGameEvent)="onRemoveGame($event)"></app-output>
 
   <ul>
     <li *ngFor="let game of games">{{ game }}</li>
   </ul>
+  <hr>
+  <!-- Task 5 -->
+  <app-hero-form></app-hero-form>
 
 </div>

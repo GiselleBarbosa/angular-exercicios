@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { ChildComponentComponent } from './child-component/child-component';
 import { ButtonComponent } from './button/button.component';
 import { OutputComponent } from './output/output.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -15,10 +18,13 @@ import { OutputComponent } from './output/output.component';
     ChildComponentComponent,
     ButtonComponent,
     OutputComponent,
+    HeroFormComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

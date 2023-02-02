@@ -1,23 +1,19 @@
-<h6 class="mb-2">{{title | uppercase }}</h6>
-
 <p class="mb-4">Task 3 - Enviando um evento de click com output.</p>
+
+<h6 class="mb-2">{{title | uppercase }}</h6>
 
 <button class="btn btn-primary mb-4" (click)="clickAlert($event)">Clique Aqui</button>
 
-<p class="mb-4">Task 4 - Enviando um valor com output </p>
+<p class="mb-4">Task 4 - Enviando um valor com output. </p>
 
 <div class="col-row">
-  <h6>Cadastro de Games:</h6>
+  <h6>{{ subtitle | uppercase }}</h6>
 
   <input class="me-3" type="text" #newGame>
 
-  <button class="btn btn-primary me-2" 
-  (click)="createGame(newGame.value)"
-  >
-  Adicionar</button>
+  <button class="btn btn-primary me-2" (click)="createGame(newGame.value)">
+    Adicionar</button>
 
-  <button class="btn btn-danger" 
-  (click)="removeGame(newGame.value)"
-  >
- Remover</button>
+  <button class="btn btn-danger" (click)="removeGame(newGame.value)">
+    Remover</button>
 </div>

@@ -9,6 +9,7 @@ export class OutputComponent implements OnInit {
 
   title: string = 'Praticando Output';
 
+  subtitle: string = 'Cadastro de Games';
   @Output() clickAlertEvent = new EventEmitter<any>();
   @Output() createEvent = new EventEmitter<string>();
   @Output() removeGameEvent = new EventEmitter<string>();

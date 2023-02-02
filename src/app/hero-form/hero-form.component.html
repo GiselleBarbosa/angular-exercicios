@@ -1,0 +1,51 @@
+<p class="mb-4">Task 5 - Treinando o uso do formulario.</p>
+
+<div [hidden]="submitted">
+  <h6>{{ title | uppercase}}</h6>
+  <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <div class="form-group">
+      <label class="mb-2" for="name">Nome</label>
+      <input type="text" class="form-control mb-3" id="name" required [(ngModel)]="model.name" name="name"
+        #name="ngModel">
+      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+        Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="mb-2" for="alterEgo">Codinome</label> 
+      <input type="text" class="form-control mb-3" id="alterEgo" required [(ngModel)]="model.alterEgo" name="alterEgo">
+    </div>
+
+    <div class="form-group">
+      <label class="mb-2" for="power">Super poder</label>
+      <select class="form-control mb-3" id="power" required [(ngModel)]="model.power" name="power" #power="ngModel">
+        <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+      </select>
+      <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
+        Super poder requerido
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Enviar</button>
+    <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">Novo Heroi</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h6>Voce enviou os seguintes dados:</h6>
+  <div class="row">
+    <div class="col-xs-3">Nome: </div>
+    <div class="col-xs-9">{{ model.name }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Codinome: </div>
+    <div class="col-xs-9">{{ model.alterEgo }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Super: Poder</div>
+    <div class="col-xs-9">{{ model.power }}</div>
+  </div>
+  <br>
+  <button type="button" class="btn btn-primary" (click)="submitted=false">Edit</button>
+</div>
