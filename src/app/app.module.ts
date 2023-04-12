@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ObservableComponent } from './observable/observable.component';
+import { AnotherObservableComponent } from './observable/another-observable/another-observable.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ObservableComponent } from './observable/observable.component';
     OutputComponent,
     HeroFormComponent,
     ReactiveFormComponent,
-    ObservableComponent
+    ObservableComponent,
+    AnotherObservableComponent,
   ],
   imports: [
     BrowserModule,
