@@ -1,0 +1,21 @@
+<p class="mb-4">Task 5 - Utilizando formulário reativo.</p>
+
+<h6>{{ title | uppercase }} </h6>
+
+<form class="col-md-3" [formGroup]="loginForm" (ngSubmit)="onloginUser()">
+  <label class="form-group mb-1" for="text">Email</label>
+
+  <div class="user mb-3">
+    <input class="form-control" type="text" placeholder="enter email" formControlName="email">
+    <span *ngIf="email?.invalid">email is required.</span>
+  </div>
+
+  <div class="password mb-3">
+    <label for="text">Password</label>
+    <input class="form-control " type="password" placeholder="enter password" formControlName="password">
+    <span *ngIf="password?.invalid">password is required.</span>
+
+  </div>
+
+  <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary">Login</button>
+</form>

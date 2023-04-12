@@ -1,25 +1,34 @@
-<app-header></app-header>
+<app-header />
 
 <div class="container mt-4">
-
   <h6>{{ titulo | uppercase }}</h6>
   <!-- Task 1  -->
-  <app-child-component [textReceived]="textSent"></app-child-component>
-  <hr>
+  <app-child-component [textReceived]="textSent" />
+  <hr />
 
   <!-- Task 2  -->
-  <app-button [btnText]="btnText" [btnIcon]="btnIcon"></app-button>
+  <app-button [btnText]="btnText" [btnIcon]="btnIcon" />
 
-  <hr>
+  <hr />
   <!-- Task 3, 4  -->
-  <app-output class="col-6" (clickAlertEvent)="onAlertReceived()" (createEvent)="onGameReceived($event)"
-    (removeGameEvent)="onRemoveGame($event)"></app-output>
+  <app-output
+    class="col-6"
+    (clickAlertEvent)="onAlertReceived()"
+    (createEvent)="onGameReceived($event)"
+    (removeGameEvent)="onRemoveGame($event)" 
+    />
 
   <ul>
     <li *ngFor="let game of games">{{ game }}</li>
   </ul>
-  <hr>
+  <hr />
   <!-- Task 5 -->
-  <app-hero-form></app-hero-form>
+  <app-hero-form />
 
+  <hr />
+  <!-- Task 6 -->
+  <app-reactive-form />
+
+  <!-- Task 7 -->
+  <app-observable />
 </div>

@@ -1,6 +1,6 @@
-<p class="mb-4">Task 5 - Treinando o uso do formulario.</p>
+<p class="mb-3">Task 5 - Treinando o uso do formulario.</p>
 
-<div [hidden]="submitted">
+<div [hidden]="submitted" class="col-md-4">
   <h6>{{ title | uppercase}}</h6>
   <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
     <div class="form-group">
@@ -27,8 +27,8 @@
       </div>
     </div>
 
-    <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Enviar</button>
-    <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">Novo Heroi</button>
+    <button type="submit" class="btn btn-primary me-2" [disabled]="!heroForm.form.valid">Enviar</button>
+    <button type="button" class="btn btn-light" (click)="newHero(); heroForm.reset()">Novo Heroi</button>
   </form>
 </div>
 

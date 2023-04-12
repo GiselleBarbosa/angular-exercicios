@@ -8,8 +8,10 @@ import { ChildComponentComponent } from './child-component/child-component';
 import { ButtonComponent } from './button/button.component';
 import { OutputComponent } from './output/output.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,15 @@ import { CommonModule } from '@angular/common';
     ButtonComponent,
     OutputComponent,
     HeroFormComponent,
+    ReactiveFormComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
